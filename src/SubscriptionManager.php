@@ -315,7 +315,7 @@ class SubscriptionManager
             }
 
             $update = new MercureUpdate(
-                $subscriber->getTopic(), $data, [$subscriber->getTopic()]
+                $subscriber->getTopic(), $data, true
             );
             ($this->publisher)($update);
         }

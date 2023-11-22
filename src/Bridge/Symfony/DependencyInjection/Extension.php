@@ -140,7 +140,7 @@ class Extension extends BaseExtension implements PrependExtensionInterface
         return $callableServiceRef;
     }
 
-    public function getAlias()
+    public function getAlias(): string
     {
         return Configuration::NAME;
     }

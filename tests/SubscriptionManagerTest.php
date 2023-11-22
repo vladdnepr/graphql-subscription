@@ -30,7 +30,7 @@ class SubscriptionManagerTest extends TestCase
         $publisher = $this->createPublisher([
             'topic' => 'https://graphql.org/subscriptions/myID',
             'data' => '{"type":"data","id":"myID","payload":{"data":{"inbox":{"message":"hello word!"}}}}',
-            'target' => 'https://graphql.org/subscriptions/myID',
+            'private' => 'on',
         ]);
         $subscriptionManager = $this->createSubscriptionManager($publisher, $executor);
         $executor
@@ -100,7 +100,7 @@ class SubscriptionManagerTest extends TestCase
         $publisher = $this->createPublisher([
             'topic' => 'https://graphql.org/subscriptions/myID',
             'data' => '{"type":"data","id":"myID","payload":{"data":{"inbox":{"message":"Hi!"}}}}',
-            'target' => 'https://graphql.org/subscriptions/myID',
+            'private' => 'on',
         ]);
         $subscriptionManager = $this->createSubscriptionManager($publisher, $executor);
         $executor
